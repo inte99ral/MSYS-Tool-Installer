@@ -1,4 +1,4 @@
-# MSYS_POWERSHELL_TOOL
+# MSYS Tool Installer
 
 ## About
 
@@ -14,7 +14,7 @@ A connection tool between Powershell and MSYS shell
 - 크로스플랫폼 개발시 MSYS 환경변수 변환 및 단일화
   - msys -get
 
-## How to use
+## How to install
 
 &nbsp; 이 MsysToolInstaller.exe 은 단순히 powershell 의 $PROFLIE 에 매크로 함수 msys 를 집어넣는 역할만 합니다. 만일 exe 가 powershell $PROFILE 파일에 접근하는 것이 불쾌하다면 직접 다음의 코드를 $PROFLIE 에 입력하셔도 됩니다.
 
@@ -30,8 +30,9 @@ A connection tool between Powershell and MSYS shell
 
 &nbsp; release 에서 MsysToolInstaller.exe 를 설치하고 실행해주세요.
 
-- Run MsysToolInstaller.exe
+### 3. Run MsysToolInstaller.exe
 
+- Run MsysToolInstaller.exe
 - powershell 에서 확인 msys -h
 
-### 3. Run MsysToolInstaller.exe
+## How to use
