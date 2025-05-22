@@ -7,12 +7,9 @@ A connection tool between Powershell and MSYS shell
 ## Feature
 
 - 0.0.1v only for powershell. cmd is not supported yet
-- 윈도우 터미널에서 MSYS 쉘에 빠른 접근
-  - msys
-- MSYS 경로의 영속적인 변수화 Persistent Variable
-  - msys -get -path
-- 크로스플랫폼 개발시 MSYS 환경변수 등록 및 단일화
-  - msys -get
+- Quick Access to MSYS Shell from Windows PowerShell
+- Persistent Variable Assignment for MSYS Path
+- Updating and Unifying Environment Variables for Cross-Platform Development
 
 ## How to install
 
@@ -24,11 +21,30 @@ A connection tool between Powershell and MSYS shell
 
 &nbsp; Restricted 실행정책은 모든 스크립트 실행을 차단합니다. powershell 의 $PROFLIE 에 매크로 함수가 구동되기 위해서는 실행정책을 바꿔주셔야 합니다.
 
+&nbsp; powershell 을 관리자 권한으로 실행해주세요. 다음의 방법 중 하나로 쉽게 접근할 수 있습니다.
+
+- 작업표시줄 윈도우 로고에 우클릭하여 퀵링크 메뉴를 열고 터미널(관리자)를 선택
+- 또는, `win + x` 단축키로 퀵링크 메뉴를 열고 터미널(관리자)를 선택
+- 또는, `win + r` 실행창에서 `powershell` 입력 후, `Start-Process powershell -Verb RunAs` 명령어로 관리자권한으로 재실행
+
+<center>
+<img alt="00" src="./doc/asset/00.png" style="max-width: 60%; height: auto;" />
+</center>
+
+<hr />
+<br />
+
 &nbsp; powershell 을 관리자 권한으로 키고 다음의 명령어를 입력해주세요.
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 ```
+
+<center>
+<img alt="01" src="./doc/asset/01.png" style="max-width: 60%; height: auto;" />
+</center>
+
+&nbsp; Get-ExecutionPolicy 명령어로 제대로 변경되었는지 확인할 수 있습니다.
 
 ### 1. Install MSYS2
 
@@ -36,7 +52,19 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 
 &nbsp; 64비트 환경의 MSYS, MSYS2는 [공식 사이트](https://www.msys2.org/)에서 설치파일을 다운로드 받을 수 있습니다.
 
-&nbsp; 디폴트 경로 또는 별개로 설치한 경로를 기억해주세요.
+<center>
+<img alt="02" src="./doc/asset/02.png" style="max-width: 60%; height: auto;" />
+</center>
+
+<br />
+
+&nbsp; 설치할 때, 설치한 경로를 기억해주셔야 합니다.
+
+<center>
+<img alt="03" src="./doc/asset/03.png" style="max-width: 60%; height: auto;" />
+</center>
+
+<br />
 
 ### 2. Install MsysToolInstaller.exe
 
