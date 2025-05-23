@@ -13,7 +13,7 @@ A connection tool between Powershell and MSYS shell
 
 ## How to install
 
-> [!NOTE] Note: About MSYS-Tool-Installer.exe
+> [!NOTE]
 >
 > &nbsp; MSYS-Tool-Installer.exe only serves to run [code.ps1](./dev/code.ps1). If you are concerned, you may skip this installation step and simply copy and run the code directly.
 
