@@ -13,7 +13,13 @@ A connection tool between Powershell and MSYS shell
 
 ## How to install
 
-&nbsp; 이 MsysToolInstaller.exe 은 단순히 powershell 의 $PROFLIE 에 매크로 함수 msys 를 집어넣는 역할만 합니다. 만일 exe 가 powershell $PROFILE 파일에 접근하는 것이 불쾌하다면 직접 코드를 $PROFLIE 에 입력하셔도 똑같은 기능을 사용할 수 있습니다.
+> [!NOTE]
+>
+> &nbsp; MSYS-Tool-Installer.exe 은 단순히 [code.ps1](./dev/code.ps1)을 구동하는 역할만을 수행합니다. 걱정되신다면 이 설치 과정을 겪지 않고 code.ps1 파일을 직접 입력하여 실행하셔도 됩니다.
+
+> [!NOTE]
+>
+> &nbsp; [code.ps1](./dev/code.ps1)은 powershell 의 $PROFLIE 에 매크로 함수 msys 를 집어넣는 역할만을 수행합니다. ps1 코드가 powershell 의 $PROFILE 파일에 접근하는 것이 불쾌하시다면 직접 코드를 $PROFLIE 에 입력하셔도 똑같은 기능을 사용할 수 있습니다.
 
 ### 0. Set powershell
 
@@ -56,6 +62,7 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 <img alt="02" src="./doc/asset/02.png" style="max-width: 60%; height: auto;" />
 </center>
 
+<hr />
 <br />
 
 &nbsp; 설치할 때, 설치한 경로를 기억해주셔야 합니다.
@@ -66,11 +73,27 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 
 <br />
 
-### 2. Install MsysToolInstaller.exe
+### 2. Install MSYS-Tool-Installer
 
-&nbsp; release 에서 MsysToolInstaller.exe 를 설치하고 실행해주세요.
+&nbsp; release 에서 최신 버전의 "MSYS-Tool-Installer.exe" 를 설치하고 실행해주세요.
 
-### 3. Run MsysToolInstaller.exe
+<center>
+<img alt="04" src="./doc/asset/04.png" style="max-width: 60%; height: auto;" />
+</center>
+
+<hr />
+<br />
+
+&nbsp; 디지털 서명 받지 않은 파일이기에 설치를 하려고 하면 경고할 것 입니다.
+
+- `···` -> `유지` -> `더보기` -> `그래도 계속` 를 눌러 그대로 진행할 수 있습니다.
+- "MSYS-Tool-Installer.exe" 는 어디까지나 code.ps1 을 실행하는 exe 파일에 불과합니다. 걱정되신다면 이 설치 과정을 겪지 않고 [dev/code.ps1](./dev/code.ps1) 파일을 직접 복사하여 실행해도 됩니다.
+
+<center>
+<img alt="05" src="./doc/asset/05.png" style="max-width: 60%; height: auto;" />
+</center>
+
+### 3. Run MSYS-Tool-Installer
 
 - Run MsysToolInstaller.exe
 - powershell 에서 확인 msys -h
