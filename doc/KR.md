@@ -34,7 +34,7 @@ A connection tool between Powershell and MSYS shell
 - 또는, `win + r` 실행창에서 `powershell` 입력 후, `Start-Process powershell -Verb RunAs` 명령어로 관리자권한으로 재실행
 
 <center>
-<img alt="00" src="./doc/asset/00.png" width="400" />
+<img alt="00" src="./asset/00.png" width="400" />
 </center>
 
 <hr />
@@ -47,7 +47,7 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 ```
 
 <center>
-<img alt="01" src="./doc/asset/01.png" width="400" />
+<img alt="01" src="./asset/01.png" width="400" />
 </center>
 
 &nbsp; Get-ExecutionPolicy 명령어로 제대로 변경되었는지 확인할 수 있습니다.
@@ -59,7 +59,7 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 &nbsp; 64비트 환경의 MSYS, MSYS2는 [공식 사이트](https://www.msys2.org/)에서 설치파일을 다운로드 받을 수 있습니다.
 
 <center>
-<img alt="02" src="./doc/asset/02.png" width="400" />
+<img alt="02" src="./asset/02.png" width="400" />
 </center>
 
 <hr />
@@ -68,7 +68,7 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 &nbsp; 설치할 때, 설치한 경로를 기억해주셔야 합니다.
 
 <center>
-<img alt="03" src="./doc/asset/03.png" width="400" />
+<img alt="03" src="./asset/03.png" width="400" />
 </center>
 
 <br />
@@ -78,7 +78,7 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 &nbsp; release 에서 최신 버전의 "MSYS-Tool-Installer.exe" 를 설치하고 실행해주세요.
 
 <center>
-<img alt="04" src="./doc/asset/04.png" width="400" />
+<img alt="04" src="./asset/04.png" width="400" />
 </center>
 
 <hr />
@@ -90,7 +90,7 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 - 또는, "MSYS-Tool-Installer.exe" 는 어디까지나 code.ps1 을 실행하는 exe 파일에 불과합니다. 걱정되신다면 이 설치 과정을 겪지 않고 [dev/code.ps1](./dev/code.ps1) 파일을 직접 복사하여 실행해도 됩니다.
 
 <center>
-<img alt="05" src="./doc/asset/05.png" width="400" />
+<img alt="05" src="./asset/05.png" width="400" />
 </center>
 
 ### 3. Run MSYS-Tool-Installer.exe
@@ -106,7 +106,7 @@ This will modify the $PROFILE file. Continue? (Y/N)
 &nbsp; 계속 설치를 진행하려면 `Y` 를 입력해주세요.
 
 <center>
-<img alt="06" src="./doc/asset/06.png" width="400" />
+<img alt="06" src="./asset/06.png" width="400" />
 </center>
 
 <hr />
@@ -119,7 +119,7 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
 ```
 
 <center>
-<img alt="07" src="./doc/asset/07.png" width="400" />
+<img alt="07" src="./asset/07.png" width="400" />
 </center>
 
 ## How to use
@@ -129,7 +129,7 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
 - powershell 에서 `msys -h` 을 입력하면 메뉴얼을 볼 수 있습니다.
 
 <center>
-<img alt="08" src="./doc/asset/08.png" width="400" />
+<img alt="08" src="./asset/08.png" width="400" />
 </center>
 
 <hr />
@@ -141,14 +141,14 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
 - `msys -set <value> -path` 명령어로 msys 경로를 저장할 수 있습니다.
 
 <center>
-<img alt="09" src="./doc/asset/09.png" width="400" />
+<img alt="09" src="./asset/09.png" width="400" />
 </center>
 <br />
 
 - `msys -get -path` 명령어로 powershell 에서 관리하는 msys 경로가 있다면 최상단에 초록색으로 표시되며, 없다면 붉은색으로 UNSET 이라고 출력됩니다. 또한, $PROFILE 의 몇번째 줄에 msys 경로가 저장되어있는지 전부 출력합니다. msys tool 은 자동으로 다른 경로를 정리하지만 오류 발생시 수정을 돕기 위해서 해당 정보를 출력합니다.
 
 <center>
-<img alt="10" src="./doc/asset/10.png" width="400" />
+<img alt="10" src="./asset/10.png" width="400" />
 </center>
 
 <hr />
@@ -162,7 +162,7 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
   - msys tool 은 `msys -set <value>` 명령어시에 자동으로 환경변수에서 다른 msys 경로를 제거합니다. 허나 msys tool 를 거치지 않는 입력 등의 이유로 오류 발생을 막기위하여 CONFLICT 경고가 존재합니다.
 
 <center>
-<img alt="11" src="./doc/asset/11.png" width="400" />
+<img alt="11" src="./asset/11.png" width="400" />
 </center>
 
 <br />
@@ -177,7 +177,7 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
   - 파워쉘에서 `msys -restart -admin` 명령어를 입력하면 관리자 권한으로 파워쉘을 재실행합니다.
 
 <center>
-<img alt="12" src="./doc/asset/12.png" width="400" />
+<img alt="12" src="./asset/12.png" width="400" />
 </center>
 
 ### MSYS 쉘 구동
@@ -194,5 +194,5 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
   - 기존 명령과 모든 것이 동일하지만, `-admin` 옵션은 관리자 권한으로 파워쉘을 실행하였을 경우에만 정상작동합니다.
 
 <center>
-<img alt="13" src="./doc/asset/13.png" width="400" />
+<img alt="13" src="./asset/13.png" width="400" />
 </center>

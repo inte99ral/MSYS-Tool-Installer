@@ -21,7 +21,7 @@ A connection tool between Powershell and MSYS shell
 >
 > &nbsp; MSYS-Tool-Installer.exe only serves to run [code.ps1](./dev/code.ps1). If you are concerned, you may skip this installation step and simply copy and run the code directly.
 
-> [!NOTE] Note: About code.ps1
+> [!NOTE]
 >
 > &nbsp; [code.ps1](./dev/code.ps1) only serves to add the msys macro function to PowerShell's $PROFILE. If you are concerned, you may copy the code in $PROFILE instead
 
@@ -40,7 +40,7 @@ A connection tool between Powershell and MSYS shell
 - Or, open the Run dialog with `win + r`, type `powershell`, and then re-run PowerShell with administrator rights by entering the command, `Start-Process powershell -Verb RunAs`.
 
 <div align=center>
-<img alt="01" src="./doc/asset/01.png" width="360" />
+<img alt="01" src="./doc/asset/01.png" width="426" />
 </div>
 
 <br />
@@ -54,7 +54,7 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 ```
 
 <div align=center>
-<img alt="02" src="./doc/asset/02.png" width="360" />
+<img alt="02" src="./doc/asset/02.png" width="426" />
 </div>
 
 &nbsp; You can use the Get-ExecutionPolicy command to verify that the policy has been changed correctly
@@ -68,7 +68,7 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 &nbsp; The 64-bit version of MSYS, MSYS2 can be downloaded from the [official website](https://www.msys2.org/)
 
 <div align=center>
-<img alt="03" src="./doc/asset/03.png" width="360" />
+<img alt="03" src="./doc/asset/03.png" width="426" />
 </div>
 
 <br />
@@ -76,7 +76,7 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 &nbsp; Please make sure to remember the installation path when installing.
 
 <div align=center>
-<img alt="04" src="./doc/asset/04.png" width="360" />
+<img alt="04" src="./doc/asset/04.png" width="426" />
 </div>
 
 <br />
@@ -86,7 +86,7 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 &nbsp; Please download and run the latest version of "MSYS-Tool-Installer.exe" from the Releases section.
 
 <div align=center>
-<img alt="05" src="./doc/asset/05.png" width="360" />
+<img alt="05" src="./doc/asset/05.png" width="426" />
 </div>
 
 <br />
@@ -97,7 +97,7 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 - Or, "MSYS-Tool-Installer.exe" is simply an executable that runs code.ps1. If you are concerned, you can skip the installer and run [dev/code.ps1](./dev/code.ps1) directly by copying it yourself.
 
 <div align=center>
-<img alt="06" src="./doc/asset/06.png" width="360" />
+<img alt="06" src="./doc/asset/06.png" width="426" />
 </div>
 
 ### Step 3. Run MSYS-Tool-Installer.exe
@@ -113,7 +113,7 @@ This will modify the $PROFILE file. Continue? (Y/N)
 &nbsp; To continue with the installation, enter `Y`.
 
 <div align=center>
-<img alt="07" src="./doc/asset/07.png" width="360" />
+<img alt="07" src="./doc/asset/07.png" width="426" />
 </div>
 
 <br />
@@ -126,7 +126,7 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
 ```
 
 <div align=center>
-<img alt="08" src="./doc/asset/08.png" width="360" />
+<img alt="08" src="./doc/asset/08.png" width="426" />
 </div>
 
 ## How to use
@@ -136,7 +136,7 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
 - You can view the manual by entering `msys -h` in PowerShell.
 
 <div align=center>
-<img alt="09" src="./doc/asset/09.png" width="360" />
+<img alt="09" src="./doc/asset/09.png" width="426" />
 </div>
 
 <br />
@@ -147,7 +147,7 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
 - Use the `msys -set <value> -path` command to set the MSYS path
 
 <div align=center>
-<img alt="10" src="./doc/asset/10.png" width="360" />
+<img alt="10" src="./doc/asset/10.png" width="426" />
 </div>
 <br />
 
@@ -155,7 +155,7 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
   MSYS Tool automatically cleans up other paths, but this information is provided to help you manually fix any issues that may occur.
 
 <div align=center>
-<img alt="11" src="./doc/asset/11.png" width="360" />
+<img alt="11" src="./doc/asset/11.png" width="426" />
 </div>
 
 <hr />
@@ -169,7 +169,7 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
   - When you use the `msys -set <value>` command, MSYS Tool will automatically remove any other MSYS paths from the environment variable. However, the <b>CONFLICT</b> warning exists to help prevent errors that may occur if changes are made outside of MSYS Tool or through other means.
 
 <div align=center>
-<img alt="12" src="./doc/asset/12.png" width="360" />
+<img alt="12" src="./doc/asset/12.png" width="426" />
 </div>
 
 <br />
@@ -184,7 +184,7 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
   - You can restart PowerShell with administrator rights by entering `msys -restart -admin` in PowerShell.
 
 <div align=center>
-<img alt="13" src="./doc/asset/13.png" width="360" />
+<img alt="13" src="./doc/asset/13.png" width="426" />
 </div>
 
 <br />
@@ -203,5 +203,5 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
   - This command works the same as the previous one, but the `-admin` option only works properly if PowerShell is running with administrator rights.
 
 <div align=center>
-<img alt="14" src="./doc/asset/14.png" width="360" />
+<img alt="14" src="./doc/asset/14.png" width="426" />
 </div>
