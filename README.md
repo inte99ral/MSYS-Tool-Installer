@@ -1,5 +1,9 @@
 # MSYS Tool Installer
 
+<div align=center>
+<img alt="00" src="./doc/asset/00.png" width="852" />
+</div>
+
 ## About
 
 A connection tool between Powershell and MSYS shell
@@ -35,9 +39,9 @@ A connection tool between Powershell and MSYS shell
 - Or, open the Quick Link menu with the `win + x` shortcut and select "Terminal (Admin)".
 - Or, open the Run dialog with `win + r`, type `powershell`, and then re-run PowerShell with administrator rights by entering the command, `Start-Process powershell -Verb RunAs`.
 
-<center>
-<img alt="00" src="./doc/asset/00.png" width="400" />
-</center>
+<div align=center>
+<img alt="01" src="./doc/asset/01.png" width="360" />
+</div>
 
 <br />
 
@@ -49,9 +53,9 @@ A connection tool between Powershell and MSYS shell
 Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 ```
 
-<center>
-<img alt="01" src="./doc/asset/01.png" width="400" />
-</center>
+<div align=center>
+<img alt="02" src="./doc/asset/02.png" width="360" />
+</div>
 
 &nbsp; You can use the Get-ExecutionPolicy command to verify that the policy has been changed correctly
 
@@ -59,130 +63,129 @@ Set-ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
 
 ### Step 1. Install MSYS2
 
-&nbsp; MSYS Tool 은 MSYS2 shell 경로를 powershell 와 이어주는 것 뿐이기 때문에. 별도로 MSYS2 설치를 필요로 합니다.
+&nbsp; MSYS Tool only connects the MSYS2 shell path to PowerShell, so you need to install MSYS2 separately.
 
-&nbsp; 64비트 환경의 MSYS, MSYS2는 [공식 사이트](https://www.msys2.org/)에서 설치파일을 다운로드 받을 수 있습니다.
+&nbsp; The 64-bit version of MSYS, MSYS2 can be downloaded from the [official website](https://www.msys2.org/)
 
-<center>
-<img alt="02" src="./doc/asset/02.png" width="400" />
-</center>
+<div align=center>
+<img alt="03" src="./doc/asset/03.png" width="360" />
+</div>
 
 <br />
 
-&nbsp; 설치할 때, 설치한 경로를 기억해주셔야 합니다.
+&nbsp; Please make sure to remember the installation path when installing.
 
-<center>
-<img alt="03" src="./doc/asset/03.png" width="400" />
-</center>
+<div align=center>
+<img alt="04" src="./doc/asset/04.png" width="360" />
+</div>
 
 <br />
 
 ### Step 2. Install MSYS-Tool-Installer.exe
 
-&nbsp; release 에서 최신 버전의 "MSYS-Tool-Installer.exe" 를 설치하고 실행해주세요.
+&nbsp; Please download and run the latest version of "MSYS-Tool-Installer.exe" from the Releases section.
 
-<center>
-<img alt="04" src="./doc/asset/04.png" width="400" />
-</center>
+<div align=center>
+<img alt="05" src="./doc/asset/05.png" width="360" />
+</div>
 
-<hr />
 <br />
 
-&nbsp; 디지털 서명 받지 않은 파일이기에 설치를 하려고 하면 경고할 것 입니다.
+&nbsp; Because this file is not signed, you may see a warning when you try to install it.
 
-- `···` -> `유지` -> `더보기` -> `그래도 계속` 를 눌러 그대로 진행할 수 있습니다.
-- 또는, "MSYS-Tool-Installer.exe" 는 어디까지나 code.ps1 을 실행하는 exe 파일에 불과합니다. 걱정되신다면 이 설치 과정을 겪지 않고 [dev/code.ps1](./dev/code.ps1) 파일을 직접 복사하여 실행해도 됩니다.
+- You can proceed by clicking `···` -> `Keep` -> `More` -> `Run anyway`.
+- Or, "MSYS-Tool-Installer.exe" is simply an executable that runs code.ps1. If you are concerned, you can skip the installer and run [dev/code.ps1](./dev/code.ps1) directly by copying it yourself.
 
-<center>
-<img alt="05" src="./doc/asset/05.png" width="400" />
-</center>
+<div align=center>
+<img alt="06" src="./doc/asset/06.png" width="360" />
+</div>
 
 ### Step 3. Run MSYS-Tool-Installer.exe
 
-&nbsp; MSYS-Tool-Installer.exe 를 실행하면 cmd 창이 실행됩니다.
+&nbsp; When you run MSYS-Tool-Installer.exe, a command prompt window will open.
 
-&nbsp; 설치를 할지 안할지를 묻는 질문이 출력됩니다.
+&nbsp; You will be asked whether you want to proceed with the installation.
 
 ```txt
 This will modify the $PROFILE file. Continue? (Y/N)
 ```
 
-&nbsp; 계속 설치를 진행하려면 `Y` 를 입력해주세요.
+&nbsp; To continue with the installation, enter `Y`.
 
-<center>
-<img alt="06" src="./doc/asset/06.png" width="400" />
-</center>
+<div align=center>
+<img alt="07" src="./doc/asset/07.png" width="360" />
+</div>
 
-<hr />
 <br />
 
-&nbsp; powershell 의 $PROFLIE 을 아예 지우고 덮어씌울지 아니면 msys tool 내용을 추가만 할 지 묻는 질문이 출력됩니다. $PROFILE 을 새로이 쓰려면 `Y`, $PROFILE 에 남겨둬야하는 코드가 있다면 `N` 를 입력해주세요.
+&nbsp; Next, you will be prompted to choose whether to completely overwrite your PowerShell $PROFILE or just add the MSYS Tool content.
+Enter `Y` if you want to create a new $PROFILE, or `N` if you have existing code in your $PROFILE that you want to keep.
 
 ```txt
 Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend the content to it? (Y/N)
 ```
 
-<center>
-<img alt="07" src="./doc/asset/07.png" width="400" />
-</center>
+<div align=center>
+<img alt="08" src="./doc/asset/08.png" width="360" />
+</div>
 
 ## How to use
 
 ### Help option
 
-- powershell 에서 `msys -h` 을 입력하면 메뉴얼을 볼 수 있습니다.
+- You can view the manual by entering `msys -h` in PowerShell.
 
-<center>
-<img alt="08" src="./doc/asset/08.png" width="400" />
-</center>
+<div align=center>
+<img alt="09" src="./doc/asset/09.png" width="360" />
+</div>
 
-<hr />
 <br />
 
 ### Path Configuration
 
-- `msys -get -path` 명령어로 powershell 에서 관리하는 msys 경로를 볼 수 있습니다.
-- `msys -set <value> -path` 명령어로 msys 경로를 저장할 수 있습니다.
+- Use the `msys -get -path` command to check the MSYS path currently managed by PowerShell.
+- Use the `msys -set <value> -path` command to set the MSYS path
 
-<center>
-<img alt="09" src="./doc/asset/09.png" width="400" />
-</center>
+<div align=center>
+<img alt="10" src="./doc/asset/10.png" width="360" />
+</div>
 <br />
 
-- `msys -get -path` 명령어로 powershell 에서 관리하는 msys 경로가 있다면 최상단에 초록색으로 표시되며, 없다면 붉은색으로 UNSET 이라고 출력됩니다. 또한, $PROFILE 의 몇번째 줄에 msys 경로가 저장되어있는지 전부 출력합니다. msys tool 은 자동으로 다른 경로를 정리하지만 오류 발생시 수정을 돕기 위해서 해당 정보를 출력합니다.
+- When you use the `msys -get -path` command, the MSYS path managed by PowerShell will be displayed at the top in green if it is set. If no path is set, "UNSET" will be shown in red. Additionally, all line numbers in your $PROFILE where the MSYS path is stored will be displayed.
+  MSYS Tool automatically cleans up other paths, but this information is provided to help you manually fix any issues that may occur.
 
-<center>
-<img alt="10" src="./doc/asset/10.png" width="400" />
-</center>
+<div align=center>
+<img alt="11" src="./doc/asset/11.png" width="360" />
+</div>
 
 <hr />
 <br />
 
 ### Environment Variable Configuration
 
-- `msys -get` 명령어로 컴퓨터의 환경변수 Path 에 msys 경로가 있는지 확인할 수 있습니다.
-  - USER 커서는 로컬 사용자 영역의 상태를, MACHINE 커서는 시스템 영역의 상태를 보여줍니다.
-  - 환경변수에 msys 경로가 없을 경우에는 UNSET 에 커서가 위치하며, 환경변수에 msys 경로가 중복 선언되었다 판단했다면 CONFLICT 에 커서가 위치합니다.
-  - msys tool 은 `msys -set <value>` 명령어시에 자동으로 환경변수에서 다른 msys 경로를 제거합니다. 허나 msys tool 를 거치지 않는 입력 등의 이유로 오류 발생을 막기위하여 CONFLICT 경고가 존재합니다.
+- The `msys -get` command allows you to check whether the MSYS path exists in your computer’s environment variable Path.
+  - The <b>USER</b> cursor indicates the status in the local user scope, while the <b>MACHINE</b> cursor shows the status in the system scope.
+  - If the MSYS path is not present in the environment variable, the cursor will be positioned at <b>UNSET</b>. If the MSYS path is detected as being declared multiple times, the cursor will be positioned at <b>CONFLICT</b>.
+  - When you use the `msys -set <value>` command, MSYS Tool will automatically remove any other MSYS paths from the environment variable. However, the <b>CONFLICT</b> warning exists to help prevent errors that may occur if changes are made outside of MSYS Tool or through other means.
 
-<center>
-<img alt="11" src="./doc/asset/11.png" width="400" />
-</center>
+<div align=center>
+<img alt="12" src="./doc/asset/12.png" width="360" />
+</div>
 
 <br />
 
-- `msys -set <value>` 명령어로 <u><b>로컬 사용자</b></u>의 환경변수 Path 에 msys 경로를 넣을 수 있습니다.
+- Use the `msys -set <value>` command to add the MSYS path to the environment variable Path for the <b>local</b>
 
-  - ucrt64, mingw64, clang64, msys2 중 하나를 입력해야합니다.
-  - msys tool 은 `msys -set <value>` 명령어시에 자동으로 환경변수에서 다른 msys 경로를 제거합니다. 허나 msys tool 를 거치지 않는 입력 등의 이유로 오류 발생을 막기위하여 CONFLICT 경고가 존재합니다.
+  - You must specify one of the following: [ ucrt64, mingw64, clang64, or msys2 ].
+  - When you use the `msys -set <value>` command, MSYS Tool will automatically remove any other MSYS paths from the environment variable. However, the <b>CONFLICT</b> warning exists to help prevent errors that may occur if changes are made outside of MSYS Tool or by other means.
 
-- `msys -set <value> -admin` 명령어로 <u><b>시스템</b></u>의 환경변수 Path 에 msys 경로를 넣을 수 있습니다.
-  - 기존 명령과 모든 것이 동일하지만, `-admin` 옵션은 관리자 권한으로 파워쉘을 실행하였을 경우에만 정상작동합니다.
-  - 파워쉘에서 `msys -restart -admin` 명령어를 입력하면 관리자 권한으로 파워쉘을 재실행합니다.
+- Use the `msys -set <value> -admin` command to add the MSYS path to the environment variable Path for the <b>system</b>
+  - This command works the same as the previous one, but the `-admin` option only works properly if PowerShell is running with administrator rights.
+  - You can restart PowerShell with administrator rights by entering `msys -restart -admin` in PowerShell.
 
-<center>
-<img alt="12" src="./doc/asset/12.png" width="400" />
-</center>
+<div align=center>
+<img alt="13" src="./doc/asset/13.png" width="360" />
+</div>
 
 <br />
 
@@ -190,15 +193,15 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
 
 > [!WARNING] Warning: Duplicate variable.
 >
-> &nbsp; msys tool 은 로컬환경과 시스템환경 각각은 단일화를 보장합니다. 하지만 사용자의 편의를 위하여 로컬환경과 시스템환경 사이에서는 중복을 허용합니다.
+> &nbsp; MSYS Tool ensures a unified MSYS path within each environments(local and system) individually. However, for user convenience, it allows duplication of the MSYS path between the local and system environment variables.
 >
-> &nbsp; 두 환경변수가 중복된 상황에서는 로컬 환경변수를 시스템 환경변수보다 우선시하기 때문에 `msys -unset` 또는 `msys -unset -admin` 명령으로 전체적으로도 단일화 상태를 유지해주는 것을 추천합니다.
+> &nbsp; If both environments(local and system) variables are set, the local user environment variable takes precedence over the system environment variable. For stable, it is recommended to use the `msys -unset` and `msys -unset -admin` commands to remove duplicates path value.
 
-- `msys` 명령어로 <u><b>로컬 사용자</b></u>의 환경변수 Path 에 따라 MSYS 쉘을 구동합니다.
+- The `msys` command launches the MSYS shell according to the MSYS path set in the <u><b>local</b></u> environment variable.
 
-- `msys -admin` 명령어로 <u><b>시스템</b></u>의 환경변수 Path 에 따라 MSYS 쉘을 구동합니다.
-  - 기존 명령과 모든 것이 동일하지만, `-admin` 옵션은 관리자 권한으로 파워쉘을 실행하였을 경우에만 정상작동합니다.
+- The `msys -admin` command launches the MSYS shell according to the MSYS path set in the <u><b>system</b></u> environment variable.
+  - This command works the same as the previous one, but the `-admin` option only works properly if PowerShell is running with administrator rights.
 
-<center>
-<img alt="13" src="./doc/asset/13.png" width="400" />
-</center>
+<div align=center>
+<img alt="14" src="./doc/asset/14.png" width="360" />
+</div>
