@@ -191,7 +191,7 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
 
 ### Launching the MSYS shell
 
-> [!WARNING] Warning: Duplicate variable.
+> [!WARNING]
 >
 > &nbsp; MSYS Tool ensures a unified MSYS path within each environments(local and system) individually. However, for user convenience, it allows duplication of the MSYS path between the local and system environment variables.
 >
