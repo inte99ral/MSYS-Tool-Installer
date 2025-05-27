@@ -157,8 +157,6 @@ Do you want to completely overwrite the $PROFILE file, or select 'N' to prepend 
 <div align=center>
 <img alt="11" src="./doc/asset/11.png" width="426" />
 </div>
-
-<hr />
 <br />
 
 ### Environment Variable Configuration
